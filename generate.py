@@ -30,6 +30,10 @@ function updateTitle(){
 
 function init(){
     controls = document.getElementById("controls");
+    controls.addEventListener("ended", function(){
+        next(); 
+        controls.play();
+    });
     source = document.getElementById("source");
     title = document.getElementById("title");
     if (controls.volume = 1){
